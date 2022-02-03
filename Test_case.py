@@ -1,5 +1,15 @@
 import os
+"""
+This is a test case that will check for a file 
+that was created by a client after making a 
+connection to the socket.
 
+The test is considered Passed if 1 is retunred.
+If NONE is retunred the test is a fail.  
+
+"""
+#TODO build in pytest logic to assert if the test passed or failed
+#TODO Make the script write a Test Report indicating Pass OR fail.  
 expected_data = ['C:/Users/J91307/Desktop/Projects/.ipynb_checkpoints/MessageTool/Report.txt']
 file_result = "Report.txt"
 
