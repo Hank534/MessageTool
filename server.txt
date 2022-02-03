@@ -1,0 +1,22 @@
+import socket
+"""
+This program is creating a server ona local host 
+and will listen for clients trying to connect to it.
+The socket will have the buffer space for 5 connections.
+"""
+# takes TCP or UPD, defualt is IPV4 TCP
+soc = socket.socket()
+print('Socket Created....')
+# must be a tuple data type
+soc.bind(('localhost', 9919))
+# allocating buffer size of 5 connections 
+soc.listen(2)
+print("Waiting for connections....")
+
+while True:
+    connections, addr = soc.accept()
+    print('connected with', addr)
+    connections.send(bytes('Welcome to LGC Repo!', 'utf-8'))
+    connections.close()
+    
+   
